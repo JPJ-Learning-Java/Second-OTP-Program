@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  <display-name>WebTest</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+
+  <servlet>
+    <servlet-name>otp</servlet-name>
+    <servlet-class>otp.otp</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>otp</servlet-name>
+    <url-pattern>/addition</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>OtpAction</servlet-name>
+    <servlet-class>otp.OtpAction</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OtpAction</servlet-name>
+    <url-pattern>/otpResult.ok</url-pattern>
+  </servlet-mapping>
+
+
+</web-app>
