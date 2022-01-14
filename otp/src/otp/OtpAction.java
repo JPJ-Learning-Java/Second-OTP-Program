@@ -27,16 +27,18 @@ public class OtpAction extends HttpServlet {
          
         boolean check_code = false;
         try {
-            // �궎, 肄붾뱶, �떆媛꾩쑝濡� �씪�쉶�슜 鍮꾨�踰덊샇媛� 留욌뒗吏� �씪移� �뿬遺� �솗�씤.
+            //
             check_code = check_code(encodedKey, user_code, ll);
         } catch (InvalidKeyException e) {
             e.printStackTrace();
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         }
-         
-        // �씪移섑븳�떎硫� true.
         System.out.println("check_code : " + check_code);
+        
+        String view = "/board.jsp";
+        
+        req.getRequestDispatcher(view).forward(req, res);
          
     }
  
